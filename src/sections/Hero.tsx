@@ -1,9 +1,8 @@
-import memoji from '@/assets/images/memoji-computer.png';
 import Image from 'next/image';
-import ArrowDown from '@/assets/icons/arrow-down.svg';
-import grainImage from '@/assets/images/grain.jpg';
-import StarIcon from '@/assets/icons/star.svg';
-import { HeroOrbit } from '@/components/HeroOrbit';
+import { HeroOrbit } from '@/components/index.component';
+import { ArrowDown, StarIcon } from '@/assets/icons/index.icons';
+import { memoji, grainImage } from '@/assets/images/index.images';
+
 export const HeroSection = () => {
   return (
     <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
@@ -80,8 +79,9 @@ export const HeroSection = () => {
             Build Exceptional User Experience
           </h1>
           <p className='mt-4 text-center text-white/60 md:text-lg'>
-            I specialize in transforming design into functional, high performing
-            web applications. Let's discuss your next project
+            {
+              "I specialize in transforming design into functional, high performing web applications. Let's discuss your next project"
+            }
           </p>
         </div>
         <div className='flex flex-col items-center justify-center mt-8 gap-4 md:flex-row'>
@@ -91,7 +91,7 @@ export const HeroSection = () => {
           </button>
           <button className='inline-flex items-center gap-2 bg-white text-gray-900 border border-white px-6 h-12 rounded-xl'>
             <span>👋</span>
-            <span className='font-semibold'>Let's Connect</span>
+            <span className='font-semibold'>{"Let's Connect"}</span>
           </button>
         </div>
       </div>
