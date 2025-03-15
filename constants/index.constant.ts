@@ -119,3 +119,37 @@ export const hobbies = [
     top: '70%',
   },
 ];
+
+export const footerLinks = [
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/shaikhhamza11/',
+  },
+  {
+    title: 'Github',
+    href: 'https://github.com/shaikhhamza11',
+  },
+  {
+    title: 'Twitter',
+    href: 'https://x.com/HamzaSh60985720',
+  },
+  {
+    title: 'Instagram',
+    href: '',
+  },
+];
+
+export const words = [
+  'Performant',
+  'Reactive',
+  'Problem-Solver',
+  'Secure',
+  'Interactive',
+  'Responsive',
+  'Lifelong Learner',
+  'User-Centric',
+  'Collaborative',
+  'Maintainable',
+  'Creative',
+  'Innovative',
+]; //add more

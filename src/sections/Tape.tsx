@@ -1,6 +1,6 @@
-import StarIcon from '@/assets/icons/star.svg';
+import { StarIcon } from '@/assets/icons/index.icons';
+import { words } from '../../constants/index.constant';
 
-const words = ['Hamza', 'Performant', 'Reactive']; //add more
 export const TapeSection = () => {
   return (
     <div className='py-16 lg:py-24 overflow-x-clip'>
