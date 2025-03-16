@@ -1,5 +1,3 @@
-'use client';
-
 import { footerLinks } from '../../constants/index.constant';
 import { ArrowUpRight } from '@/assets/icons/index.icons';
 
@@ -18,7 +16,6 @@ export const Footer = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-flex items-center justify-center gap-1.5 cursor-pointer'
-                onClick={() => console.log('hello')}
               >
                 <span className='font-semibold'>{link.title}</span>
                 <ArrowUpRight className='size-4' />

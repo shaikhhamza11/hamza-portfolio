@@ -1,4 +1,3 @@
-'use client';
 import { ArrowUpRight } from '@/assets/icons/index.icons';
 import { grainImage } from '@/assets/images/index.images';
 
