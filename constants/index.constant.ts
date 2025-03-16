@@ -183,3 +183,26 @@ export const portfolioProjects = [
     image: '',
   },
 ];
+
+export const experience = [
+  {
+    id: 2,
+    title: 'Full Stack Developer',
+    companyName: 'Roxiler Systems',
+    startDate: 'June 2022',
+    endDate: '',
+    currentlyWorkingHere: true,
+    description:
+      'Developed scalable server-side applications and APIs using Node.js, ExpressJs, and NestJS. Designed and implemented microservices with optimized inter-process communication. Integrated WebSockets for real-time features and enhanced platform performance by profiling event loops.',
+  },
+  {
+    id: 1,
+    title: 'Full Stack Developer',
+    companyName: 'Great Manager Institute',
+    startDate: 'March 2021',
+    endDate: 'April 2022',
+    currentlyWorkingHere: false,
+    description:
+      'Built and maintained RESTful APIs using Express.js. Implemented Node.js streams for efficient file handling and optimized deployment pipelines using GitHub Actions. Developed WebSocket-based solutions for real-time communication and collaborated with clients for technical implementations.',
+  },
+];

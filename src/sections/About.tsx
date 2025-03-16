@@ -8,14 +8,16 @@ import {
   ToolboxItems,
 } from '@/components/index.component';
 
+import { mapImage, smileMemoji } from '@/assets/images/index.images';
 import {
-  resumePreview,
-  mapImage,
-  smileMemoji,
-} from '@/assets/images/index.images';
-import { hobbies, toolBoxItems } from '../../constants/index.constant';
+  hobbies,
+  toolBoxItems,
+  experience,
+} from '../../constants/index.constant';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
+import { StarIcon } from '@/assets/icons/index.icons';
+
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
@@ -26,6 +28,11 @@ export const AboutSection = () => {
           eyebrow='A Glimpse Into My World'
           description='Learn more about who I am, what I do'
         />
+        <p className='mt-4 text-sm text-white/50 md:text-base text-justify'>
+          {
+            'I am a passionate Software Engineer with expertise in building scalable backend architectures using Node.js, ExpressJs, and NestJS. With a strong foundation in full-stack development, I enjoy creating dynamic front-end experiences using React while ensuring seamless API integrations. I have worked on high-performance applications, optimizing system architecture and database management. Beyond coding, I love exploring new technologies, solving complex problems, and continuously learning to refine my skills.'
+          }
+        </p>
         <div className='mt-20 flex flex-col gap-8'>
           <div className='grid grid-col-1 gap-8 md:grid-cols-5 md:gap-8 lg:grid-cols-3'>
             <Card className='h-[320px] md:col-span-2 lg:col-span-1'>
@@ -63,13 +70,12 @@ export const AboutSection = () => {
               />
             </Card>
           </div>
+          {/* Beyound the code */}
           <div className='grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-8 lg:grid-cols-3'>
-            {/* Beyound the code */}
             <Card className='h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2'>
               <CardHeader
                 title='Beyond the Code'
                 description='Explore the interest and hobbies beyond the digital realm.'
-                className='px-6 pt-6'
               />
               <div className='relative flex-1' ref={constraintRef}>
                 {hobbies.map(hobby => (
@@ -109,6 +115,30 @@ export const AboutSection = () => {
               </div>
             </Card>
           </div>
+          {/* Experiences Section */}
+          <Card className='h-auto md:col-span-5'>
+            <CardHeader
+              title='My Experiences'
+              description='A glimpse into my professional journey.'
+            />
+            <ul className='mt-4 px-6 pb-6 flex flex-col gap-8'>
+              {experience.map(exp => (
+                <li key={exp.id}>
+                  <h3 className='bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent inline-flex font-bold uppercase -tracking-wide text-sm gap-2'>
+                    <StarIcon className='size-4 text-emerald-300' />
+                    {exp.title}
+                  </h3>
+                  <p className='text-sm lg:text-base text-white mt-2'>
+                    {exp.companyName} | {exp.startDate} –{' '}
+                    {exp.currentlyWorkingHere ? 'Present' : exp.endDate}
+                  </p>
+                  <p className='mt-2 text-sm text-white/50 md:text-base text-justify'>
+                    {exp.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </Card>
         </div>
       </div>
     </div>
