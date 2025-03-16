@@ -2,7 +2,6 @@ import JavascriptIcon from '@/assets/icons/square-js.svg';
 import HTMLIcon from '@/assets/icons/html5.svg';
 import CssIcon from '@/assets/icons/css3.svg';
 import ReactIcon from '@/assets/icons/react.svg';
-import ChromeIcon from '@/assets/icons/chrome.svg';
 import GithubIcon from '@/assets/icons/github.svg';
 import NextIcon from '@/assets/icons/next-js.svg';
 import NestIcon from '@/assets/icons/nestjs.svg';
@@ -15,6 +14,7 @@ import ExpressIcon from '@/assets/icons/express.svg';
 import StarIcon from '@/assets/icons/star.svg';
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import ArrowUpRight from '@/assets/icons/arrow-up-right.svg';
+import SparkleIcon from '@/assets/icons/sparkle.svg';
 import CheckIcon from '@/assets/icons/check-circle.svg';
 
 export {
@@ -22,7 +22,6 @@ export {
   HTMLIcon,
   CssIcon,
   ReactIcon,
-  ChromeIcon,
   GithubIcon,
   NextIcon,
   NestIcon,
@@ -36,4 +35,5 @@ export {
   ArrowDown,
   ArrowUpRight,
   CheckIcon,
+  SparkleIcon,
 };

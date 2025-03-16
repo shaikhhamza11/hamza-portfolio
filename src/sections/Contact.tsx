@@ -1,9 +1,10 @@
+'use client';
 import { ArrowUpRight } from '@/assets/icons/index.icons';
 import { grainImage } from '@/assets/images/index.images';
 
 export const ContactSection = () => {
   return (
-    <div className='py-16 pt-12 lg:py-24 lg:pt-20'>
+    <div className='py-16 pt-12 lg:py-24 lg:pt-20' id='contact'>
       <div className='container'>
         <div className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0'>
           <div
@@ -24,10 +25,12 @@ export const ContactSection = () => {
               </p>
             </div>
             <div>
-              <button className='inline-flex gap-2 text-white bg-gray-900 items-center px-6 h-12 rounded-xl mt-8 w-max border border-gray-900'>
-                <span className='font-semibold'>Contact Me</span>
-                <ArrowUpRight className='size-4' />
-              </button>
+              <a href="mailto:shaikh.hamza1199@gmail.com?subject=Let's%20Connect">
+                <button className='inline-flex gap-2 text-white bg-gray-900 items-center px-6 h-12 rounded-xl mt-8 w-max border border-gray-900 btn-click'>
+                  <span className='font-semibold'>Contact Me</span>
+                  <ArrowUpRight className='size-4' />
+                </button>
+              </a>
             </div>
           </div>
         </div>

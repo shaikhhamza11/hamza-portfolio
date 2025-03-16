@@ -1,57 +1,11 @@
 import Image from 'next/image';
 import { Card, SectionHeader } from '@/components/index.component';
-import {
-  lightSaasLandingPage,
-  aiStartupLandingPage,
-  darkSaasLandingPage,
-} from '@/assets/images/index.images';
 import { CheckIcon, ArrowUpRight } from '@/assets/icons/index.icons';
-
-const portfolioProjects = [
-  {
-    id: 1,
-    company: 'Acme Corp',
-    year: '2022',
-    title: 'Dark Saas Landing Page',
-    results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
-    ],
-    link: 'https://youtu.be/4k7IdSLxh6w',
-    image: darkSaasLandingPage,
-  },
-  {
-    id: 2,
-    company: 'Innovative Co',
-    year: '2021',
-    title: 'Light Saas Landing Page',
-    results: [
-      { title: 'Boosted sales by 20%' },
-      { title: 'Expanded customer reach by 35%' },
-      { title: 'Increased brand awareness by 15%' },
-    ],
-    link: 'https://youtu.be/7hi5zwO75yc',
-    image: lightSaasLandingPage,
-  },
-  {
-    id: 3,
-    company: 'Quantum Dynamics',
-    year: '2023',
-    title: 'AI Startup Landing Page',
-    results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
-    ],
-    link: 'https://youtu.be/Z7I5uSRHMHg',
-    image: aiStartupLandingPage,
-  },
-];
+import { portfolioProjects } from '../../constants/index.constant';
 
 export const ProjectsSection = () => {
   return (
-    <section className='pb-16 lg:py-24'>
+    <section className='pb-16 lg:py-24' id='projects'>
       <div className='container'>
         <SectionHeader
           title='Featured Projects'
@@ -62,10 +16,13 @@ export const ProjectsSection = () => {
           <p className='text-center uppercase text-emerald-300 font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 bg-clip-text text-transparent'></p>
         </div>
         <div className='flex flex-col mt-10 md:mt-20 gap-16'>
-          {portfolioProjects.map(project => (
+          {portfolioProjects.map((project, projectIndex) => (
             <Card
               key={project.title}
-              className='pt-8 px-8 md:pt-12 pb-0 md:px-10 lg-px-16 lg:pt-20'
+              className='pt-8 px-8 md:pt-12 pb-0 md:px-10 lg-px-16 lg:pt-20 sticky'
+              style={{
+                top: `calc(64px + ${projectIndex * 40}px)`,
+              }}
             >
               <div className='lg:grid lg:grid-cols-2 lg-gap-16'>
                 <div className='lg:pb-16'>
@@ -91,20 +48,24 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <button className='bg-white text-gray-900 h-12 w-full rounded-xl font-serif inline-flex justify-center items-center gap-2 mt-8 md:w-auto px-6'>
-                      <span>Visit Live Site</span>
-                      <ArrowUpRight className='size-4' />
-                    </button>
-                  </a>
+                  {project.link && (
+                    <a href={project.link}>
+                      <button className='bg-white text-gray-900 h-12 w-full rounded-xl font-serif inline-flex justify-center items-center gap-2 mt-8 md:w-auto px-6'>
+                        <span>Visit Live Site</span>
+                        <ArrowUpRight className='size-4' />
+                      </button>
+                    </a>
+                  )}
                 </div>
-                <div className='relative'>
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    className='mt-8 -mb-4 md:-mb-0 lg-mt-0 lg:-mr-16 lg:absolute lg:h-full lg:w-auto lg:max-w-none'
-                  />
-                </div>
+                {project.image && (
+                  <div className='relative'>
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      className='mt-8 -mb-4 md:-mb-0 lg-mt-0 lg:-mr-16 lg:absolute lg:h-full lg:w-auto lg:max-w-none'
+                    />
+                  </div>
+                )}
               </div>
             </Card>
           ))}

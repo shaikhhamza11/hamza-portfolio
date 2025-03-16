@@ -15,4 +15,9 @@
   .container {
     @apply lg:max-w-5xl;
   }
+  .btn-click {
+    @apply hover:bg-gray-800 active:bg-gray-700 active:scale-95 
+           focus:ring-2 focus:ring-gray-500 transition-all 
+           duration-150 ease-in-out;
+  }
 }

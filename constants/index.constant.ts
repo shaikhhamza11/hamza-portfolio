@@ -3,7 +3,6 @@ import {
   HTMLIcon,
   CssIcon,
   ReactIcon,
-  ChromeIcon,
   GithubIcon,
   NextIcon,
   NestIcon,
@@ -31,10 +30,6 @@ export const toolBoxItems = [
   {
     title: 'Github',
     iconType: GithubIcon,
-  },
-  {
-    title: 'Chrome',
-    iconType: ChromeIcon,
   },
   {
     title: 'React',
@@ -77,46 +72,39 @@ export const toolBoxItems = [
 export const hobbies = [
   {
     title: 'Gaming',
-    emoji: '🏋️',
+    emoji: '🎮',
     left: '5%',
     top: '5%',
   },
   {
     title: 'Fitness',
     emoji: '🏋️',
-    left: '50%',
-    top: '5%',
-  },
-  {
-    title: 'Test',
-    emoji: '🏋️',
-    left: '35%',
-    top: '40%',
-  },
-
-  {
-    title: 'Sports',
-    emoji: '🏋️',
-    left: '5%',
-    top: '35%',
-  },
-  {
-    title: 'Fitness',
-    emoji: '🏋️',
-    left: '70%',
-    top: '45%',
-  },
-  {
-    title: 'Sports',
-    emoji: '🏋️',
-    left: '5%',
-    top: '65%',
-  },
-  {
-    title: 'FItness',
-    emoji: '🏋️',
-    left: '45%',
+    left: '12%',
     top: '70%',
+  },
+  {
+    title: 'Sports',
+    emoji: '⚽',
+    left: '60%',
+    top: '75%',
+  },
+  {
+    title: 'Traveling',
+    emoji: '✈️',
+    left: '40%',
+    top: '25%',
+  },
+  {
+    title: 'Coding',
+    emoji: '💻',
+    left: '50%',
+    top: '0%',
+  },
+  {
+    title: 'Bike Riding',
+    emoji: '🚴‍♂️',
+    left: '10%',
+    top: '40%',
   },
 ];
 
@@ -135,7 +123,7 @@ export const footerLinks = [
   },
   {
     title: 'Instagram',
-    href: '',
+    href: 'https://www.instagram.com/shaikh_hamza11/?hl=en',
   },
 ];
 
@@ -152,4 +140,46 @@ export const words = [
   'Maintainable',
   'Creative',
   'Innovative',
-]; //add more
+];
+
+export const portfolioProjects = [
+  {
+    id: 1,
+    company: 'Coming Soon',
+    year: '2025',
+    title: '🚧 Project Under Construction',
+    results: [
+      { title: 'Stay tuned for updates!' },
+      { title: 'Exciting features coming soon' },
+      { title: 'Launching in 2025' },
+    ],
+    link: '',
+    image: '',
+  },
+  {
+    id: 2,
+    company: 'Coming Soon',
+    year: '2025',
+    title: '🚧 Project Under Construction',
+    results: [
+      { title: 'Stay tuned for updates!' },
+      { title: 'Exciting features coming soon' },
+      { title: 'Launching in 2025' },
+    ],
+    link: '',
+    image: '',
+  },
+  {
+    id: 3,
+    company: 'Coming Soon',
+    year: '2025',
+    title: '🚧 Project Under Construction',
+    results: [
+      { title: 'Stay tuned for updates!' },
+      { title: 'Exciting features coming soon' },
+      { title: 'Launching in 2025' },
+    ],
+    link: '',
+    image: '',
+  },
+];
